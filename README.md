@@ -52,16 +52,6 @@ Visit [http://localhost:5173](http://localhost:5173) in your browser.
 - MongoDB
 - Docker
 
-## Dockerfile
-
-```dockerfile
-FROM node:20
-
-WORKDIR /user/src/app
-
-COPY . .
-
-RUN npm install
 
 EXPOSE 3001
 
