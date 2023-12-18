@@ -51,11 +51,5 @@ Visit [http://localhost:5173](http://localhost:5173) in your browser.
 - Socket.IO
 - MongoDB
 - Docker
-
-
-EXPOSE 3001
-
-CMD ["node", "server.js"]
-```
-
+  
 Feel free to explore and enhance the features of this collaborative text editor!
