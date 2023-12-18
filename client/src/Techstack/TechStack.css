@@ -1,0 +1,40 @@
+.techstack_container{
+    /* background-color: #fcf9f6; */
+    background-color: white;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+.tech_heading{
+    text-align: center;
+    padding: 10px;
+    font-size: 3em;
+}
+
+.technologies{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tech_card{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    /* border: 1px solid lightgray; */
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 10em;
+}
+
+.image{
+    width: 10em;
+}
+
+.image img{
+    width: 100%;
+}

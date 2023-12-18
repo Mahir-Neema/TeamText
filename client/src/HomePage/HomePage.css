@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.HomePage_container {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  height: 200vh;
+  text-align: center;
+}
+
+.main_text_sec {
+  padding: 20px 5px;
+  font-size: 2.1em;
+  font-weight: 600;
+}
+
+.purpleclr {
+  color: #824bfb;
+}
+
+.skyblueclr {
+  color: #3586fe;
+}
+
+.lightredclr {
+  color: #ff5d5d;
+}
+
+.orgclr {
+  color: #ff9800;
+}
+
+.new_doc_btn a {
+  text-decoration: none;
+  color: white;
+  background-color: #ff5d5d;
+  padding: 6px 12px;
+  border-radius: 3px;
+}
+
+.new_doc_btn {
+  animation: oscillate 1s infinite;
+}
+
+@keyframes oscillate {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.join_room{
+    margin-top: 35px;
+}
+
+.roomid-input {
+  flex: 1;
+  padding: 9px;
+  font-size: 14px;
+  margin: 8px;
+  /* border: none; */
+}
+
+input:focus {
+  outline: none;
+}
+
+.roomid-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #000000;
+  color: #f9f9f9;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+
+.disabled{
+  background-color: #5b5b5b;
+}
+
+.homepage_img{
+  margin-top: 25px;
+}
+
+.homepage_img img{
+  margin: auto;
+  width: 55%;
+}
+
+
+@media only screen and (max-width: 650px) {
+  .homepage_img img{
+    width: 65%;
+  }
+
+  .HomePage_container {
+    height: 110vh;
+  }
+}

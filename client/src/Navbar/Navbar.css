@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.Navbar_container {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid rgb(199, 199, 199);
+}
+
+.Navbar_nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 20px;
+  align-items: center;
+}
+
+.left {
+  font-size: 1.8em;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  /* width: 195px;
+    justify-content: space-between; */
+}
+
+.left a {
+  text-decoration: none;
+  color: black;
+  margin-left: 5px;
+}
+
+.center a {
+  text-decoration: none;
+  color: grey;
+  margin: 0 5px;
+}
+
+.center a:hover {
+  border-bottom: 2px solid #4348db;
+  color: #4348db;
+  padding-bottom: 18px;
+  transition: 0.1s;
+}
+
+.right button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 6px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.right a{
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .center{
+    display: none;
+  }
+
+  .right button {
+    padding: 5px 10px;
+    margin: 0 3px;
+  }
+}
+
+
+.copyalert{
+  position: absolute;
+  top: 110px;
+  right: 10px;
+  background-color: #8c50ff;
+  color: white;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+/* Add this to your Navbar.css or a new CSS file */
+.alert-container {
+  position: fixed;
+  top: 110px;
+  right: 10px;
+  padding: 10px;
+  z-index: 9999;
+}
+
+.slide-in-out {
+  animation: slideInOut 3s ease-in-out;
+  background-color: #8c50ff;
+  color: white;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+@keyframes slideInOut {
+  0% {
+    transform: translateX(100%);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(130%);
+  }
+}
+
+
+
+
+@media only screen and (max-width: 378px) {
+    .right button {
+      padding: 5px 8px;
+      margin: 0 2px;
+    }
+  }
