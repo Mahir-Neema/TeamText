@@ -5,6 +5,7 @@ import {v4 as uuidV4} from 'uuid';
 import Navbar from './Navbar/Navbar';
 import HomePage from './HomePage/HomePage';
 import Techstack from './Techstack/Techstack';
+import About from './About/About';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" exact element={<HomePage/>} />
         <Route path="/documents/:id" element={<TextEditor/>} />
         <Route path="/techstack" element={<Techstack/>}/>
+        <Route path="/about" element={<About/>}/>
       </Routes>
     </Router>
   )

@@ -1,0 +1,18 @@
+.about_page{
+    background-color: white;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+.ap_heading{
+    font-size: xx-large;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.ap_content{
+    font-size: large;
+    margin: 10px 60px;
+}

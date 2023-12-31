@@ -56,7 +56,7 @@ function Navbar() {
           </div>
           <div className="center">
             <NavLink to={`/documents/${uuidV4()}`}>New Doc</NavLink>
-            <NavLink to="/">About</NavLink>
+            <NavLink to="/about">About</NavLink>
             <a href="https://github.com/Mahir-Neema/TeamText" target="blank">
               Github
             </a>
