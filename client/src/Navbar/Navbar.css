@@ -12,6 +12,31 @@
   align-items: center;
 }
 
+.logonavLink{
+  background: linear-gradient(to right, #ff00cc, #3b6ae1, #00ccff);
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+      background-position: 0% center;
+  }
+  50% {
+      background-position: 70% center;
+  }
+  70% {
+      background-position: 0% center;
+  }
+}
+
 .left {
   font-size: 1.8em;
   font-weight: 600;

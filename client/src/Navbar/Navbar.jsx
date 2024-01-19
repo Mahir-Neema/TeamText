@@ -51,8 +51,8 @@ function Navbar() {
       <div className="Navbar_container">
         <div className="Navbar_nav">
           <div className="left">
-            <img src="logo.png" width={27} />
-            <NavLink to="/">TeamText</NavLink>
+            <img src="/logo.png" width={27} />
+            <NavLink to="/" className='logonavLink'>TeamText</NavLink>
           </div>
           <div className="center">
             <NavLink to={`/documents/${uuidV4()}`}>New Doc</NavLink>
