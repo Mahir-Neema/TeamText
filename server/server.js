@@ -1,46 +1,56 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
-const Document = require("./Document"); //  Document model
+const Document = require('./Document'); // Document model
+const cors = require('cors'); 
 require('dotenv').config();
 
 const app = express();
 
+const allowedOrigins = [
+  'https://64d1dc015ddfe231370d9eae--prismatic-malasada-9818c4.netlify.app',
+  'http://localhost:5173',
+  'https://team-text.netlify.app'
+];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ["GET", "POST"],
+};
+
+// CORS middleware
+app.use(cors(corsOptions));
+
 // Serve the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-// Handle all client-side routes
+// Handling client-side routes
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build/index.html'));
 });
-
 
 const mongoUri = process.env.MONGODB_URI;
 mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Database connected'))
   .catch(e => console.error(e));
 
-
 const port = process.env.PORT || 3001;
 const server = app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
 
-
-const allowedOrigins = [
-  'https://64d1dc015ddfe231370d9eae--prismatic-malasada-9818c4.netlify.app/',
-  'http://localhost:5173'
-];
-
-
 const io = require("socket.io")(server, {
   cors: {
-    origin: '*',
+    origin: allowedOrigins,
     methods: ["GET", "POST"],
   },
 });
-
-
 
 io.on("connection", (socket) => {
   socket.on('get-document', async documentId => {
@@ -59,7 +69,6 @@ io.on("connection", (socket) => {
 });
 
 const defaultValue = "";
-
 
 async function findOrCreateDocument(id){
     if(id == null) return;
