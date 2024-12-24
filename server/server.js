@@ -8,9 +8,9 @@ require('dotenv').config();
 const app = express();
 
 const allowedOrigins = [
-  'https://64d1dc015ddfe231370d9eae--prismatic-malasada-9818c4.netlify.app',
   'http://localhost:5173',
-  'https://team-text.netlify.app'
+  'https://team-text.netlify.app',
+  'https://teamtext.netlify.app',
 ];
 
 const corsOptions = {
